@@ -52,6 +52,7 @@
 		507DA9F1143B8463007FA359 /* TabIcon-ORI.png in Resources */ = {isa = PBXBuildFile; fileRef = 507DA9E7143B8463007FA359 /* TabIcon-ORI.png */; };
 		507DA9F2143B8463007FA359 /* TabIcon-ORI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 507DA9E8143B8463007FA359 /* TabIcon-ORI@2x.png */; };
 		5088F38A143B86B000C6E8A3 /* libORI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507DA9FB143B84D8007FA359 /* libORI.a */; };
+		50A905C816145D9000E95C39 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A905C716145D9000E95C39 /* Default-568h@2x.png */; };
 		50C70398150B599A00F89935 /* NSBundle+LoadedClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C70397150B599A00F89935 /* NSBundle+LoadedClasses.m */; };
 		50D42391127C5B17007FB68F /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D4238F127C5B17007FB68F /* BrowserViewController.m */; };
 		50D42392127C5B17007FB68F /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D42390127C5B17007FB68F /* BrowserViewController.xib */; };
@@ -156,6 +157,7 @@
 		507DA9E7143B8463007FA359 /* TabIcon-ORI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-ORI.png"; sourceTree = "<group>"; };
 		507DA9E8143B8463007FA359 /* TabIcon-ORI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabIcon-ORI@2x.png"; sourceTree = "<group>"; };
 		507DA9F3143B84D7007FA359 /* ORI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORI.xcodeproj; path = ../ORI/ORI.xcodeproj; sourceTree = "<group>"; };
+		50A905C716145D9000E95C39 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		50C70396150B599A00F89935 /* NSBundle+LoadedClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+LoadedClasses.h"; sourceTree = "<group>"; };
 		50C70397150B599A00F89935 /* NSBundle+LoadedClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+LoadedClasses.m"; sourceTree = "<group>"; };
 		50D4238E127C5B17007FB68F /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				50A905C716145D9000E95C39 /* Default-568h@2x.png */,
 				507DA9F3143B84D7007FA359 /* ORI.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -476,6 +479,7 @@
 				507DA9F0143B8463007FA359 /* TabIcon-Frameworks@2x.png in Resources */,
 				507DA9F1143B8463007FA359 /* TabIcon-ORI.png in Resources */,
 				507DA9F2143B8463007FA359 /* TabIcon-ORI@2x.png in Resources */,
+				50A905C816145D9000E95C39 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
