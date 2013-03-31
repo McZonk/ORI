@@ -13,6 +13,7 @@
 @interface PathViewController () <UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, retain) NSArray* files;
+@property (nonatomic, retain) NSMutableArray* filesFiltered;
 
 @property (nonatomic, retain) UIDocumentInteractionController* interactionController;
 
@@ -35,6 +36,8 @@
 	
 	NSError* error = nil;
 	self.files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.path error:&error];
+	self.filesFiltered = [[self.files mutableCopy]autorelease];
+	
 	if(error) {
 		NSLog(@"%@", error);
 	}
@@ -63,9 +66,10 @@
 - (void)dealloc {
 	self.path = nil;
 	self.files = nil;
+	self.filesFiltered = nil;
 	
 	self.interactionController = nil;
-
+	
 	[super dealloc];
 }
 
@@ -75,7 +79,7 @@
 
 - (void)viewDidUnload {
 	self.interactionController = nil;
-
+	
 	[super viewDidUnload];
 }
 
@@ -91,15 +95,15 @@
 }
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-	return self.files.count;
+	return self.filesFiltered.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-	NSString* name = [self.files objectAtIndex:indexPath.row];
+	NSString* name = [self.filesFiltered objectAtIndex:indexPath.row];
 	NSString* fullPath = [self.path stringByAppendingPathComponent:name];
 	NSDictionary* attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:fullPath error:nil];
-
-//	NSLog(@"%@ %@", name, attributes);
+	
+	//	NSLog(@"%@ %@", name, attributes);
 	
 	if([[attributes fileType] isEqual:NSFileTypeDirectory]) {
 		PathCell* cell = (PathCell*)[tableView dequeueReusableCellWithIdentifier:[PathCell reuseIdentifier]];
@@ -120,9 +124,9 @@
 			gestureRecognizer.cancelsTouchesInView = NO;
 			[cell addGestureRecognizer:gestureRecognizer];
 		}
-
+		
 		cell.nameView.text = name;
-
+		
 		unsigned long long fileSize = attributes.fileSize;
 		if(fileSize == 0) {
 			cell.sizeView.text = @"Zero Bytes";
@@ -143,13 +147,24 @@
 		return;
 	}
 	
-	NSString* name = [self.files objectAtIndex:indexPath.row];
+	NSString* name = [self.filesFiltered objectAtIndex:indexPath.row];
 	NSString* fullPath = [self.path stringByAppendingPathComponent:name];
 	
-	UIViewController* viewController = [UIViewController viewControllerForPath:fullPath];
-	if(viewController) {
-		[self.navigationController pushViewController:viewController animated:YES];
+	if ([[NSFileManager defaultManager]fileExistsAtPath:fullPath]) {
+		if ([[NSFileManager defaultManager]isReadableFileAtPath:fullPath]) {
+			UIViewController* viewController = [UIViewController viewControllerForPath:fullPath];
+			if(viewController) {
+				[self.navigationController pushViewController:viewController animated:YES];
+			} else {
+			}
+			[self.searchDisplayController setActive:NO animated:YES];
+		} else {
+			[[[[UIAlertView alloc]initWithTitle:@"No permission" message:@"No rights to read the file" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]autorelease]show];
+			[tableView deselectRowAtIndexPath:indexPath animated:YES];
+		}
 	} else {
+		[[[[UIAlertView alloc]initWithTitle:@"No file" message:@"The file does no longer exist" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]autorelease]show];
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	}
 }
 
@@ -163,7 +178,7 @@
 		
 		NSIndexPath* indexPath = [tableView indexPathForCell:cell];
 		
-		NSString* name = [self.files objectAtIndex:indexPath.row];
+		NSString* name = [self.filesFiltered objectAtIndex:indexPath.row];
 		NSString* fullPath = [self.path stringByAppendingPathComponent:name];
 		
 		NSURL* URL = [NSURL fileURLWithPath:fullPath];
@@ -173,6 +188,22 @@
 		[self.interactionController presentOptionsMenuFromRect:cell.frame inView:tableView animated:YES];
 	}
 }
+
+#pragma mark - UISearchDisplayDelegate
+
+- (void)searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller {
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+	self.filesFiltered = [[self.files mutableCopy]autorelease];
+	[self.filesFiltered filterUsingPredicate:[NSPredicate predicateWithFormat:@"self CONTAINS[c] %@", searchString]];
+	return YES;
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller {
+	self.filesFiltered = [[self.files mutableCopy]autorelease];
+}
+
 
 #pragma mark - UIDocumentInteractionControllerDelegate
 

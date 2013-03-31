@@ -80,10 +80,10 @@
 	}
 }
 
-- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
 	UIColor* color = self.typeView.backgroundColor;
 	
-	[super setHighlighted:highlighted animated:animated];
+	[super setSelected:selected animated:animated];
 	
 	self.typeView.backgroundColor = color;
 }

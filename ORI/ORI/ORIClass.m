@@ -182,7 +182,7 @@
 	NSMutableSet* result = [NSMutableSet setWithCapacity:count];
 	
 	for(NSUInteger i = 0; i < count; i++) {
-		[result addObject:[ORIMethod ORIMethodWithMethod:methods[i]]];
+		[result addObject:[ORIMethod ORIClassMethodWithMethod:methods[i]]];
 	}
 	
 	free(methods);

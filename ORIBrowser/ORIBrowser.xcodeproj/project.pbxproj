@@ -73,6 +73,7 @@
 		50FEB155138DB9F500987BA9 /* StatusBarAwareTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FEB153138DB9F500987BA9 /* StatusBarAwareTabBarController.m */; };
 		50FEB159138DBE5300987BA9 /* ActiveNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FEB158138DBE5300987BA9 /* ActiveNavigationController.m */; };
 		50FFE6E813D01C3300357604 /* UINavigationController+SwipeToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FFE6E713D01C3200357604 /* UINavigationController+SwipeToPop.m */; };
+		FA06DF7B170A2A42007123D1 /* NSString+InArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06DF7A170A2A42007123D1 /* NSString+InArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,8 @@
 		50FFE6E613D01C3200357604 /* UINavigationController+SwipeToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SwipeToPop.h"; sourceTree = "<group>"; };
 		50FFE6E713D01C3200357604 /* UINavigationController+SwipeToPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SwipeToPop.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ORIBrowser-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ORIBrowser-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		FA06DF79170A2A42007123D1 /* NSString+InArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InArray.h"; sourceTree = "<group>"; };
+		FA06DF7A170A2A42007123D1 /* NSString+InArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InArray.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +372,8 @@
 				50FEB158138DBE5300987BA9 /* ActiveNavigationController.m */,
 				50FBC56313A5558F00B48C1E /* NSString+ContainsCharacterSearch.h */,
 				50FBC56413A5558F00B48C1E /* NSString+ContainsCharacterSearch.m */,
+				FA06DF79170A2A42007123D1 /* NSString+InArray.h */,
+				FA06DF7A170A2A42007123D1 /* NSString+InArray.m */,
 				50FFE6E613D01C3200357604 /* UINavigationController+SwipeToPop.h */,
 				50FFE6E713D01C3200357604 /* UINavigationController+SwipeToPop.m */,
 				5011805F1406993000F0624E /* FlipViewController.h */,
@@ -521,6 +526,7 @@
 				507DA995143B6ED8007FA359 /* UIViewController+FileViewController.m in Sources */,
 				504AF878143BA1BC0075D098 /* FavoritesStore.m in Sources */,
 				50C70398150B599A00F89935 /* NSBundle+LoadedClasses.m in Sources */,
+				FA06DF7B170A2A42007123D1 /* NSString+InArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

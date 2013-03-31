@@ -8,6 +8,8 @@
 
 @property (nonatomic, retain) NSArray* ORITypes;
 
+@property (nonatomic, readwrite) BOOL classMethod;
+
 @end
 
 
@@ -35,11 +37,19 @@
 	return [[[ORIMethod alloc] initWithMethod:method] autorelease];
 }
 
++ (ORIMethod*)ORIClassMethodWithMethod:(Method)method {
+	return [[[ORIMethod alloc] initWithMethod:method classMethod:YES] autorelease];
+}
+
 - (id)initWithMethod:(Method)method_ {
+	return [self initWithMethod:method_ classMethod:NO];
+}
+
+- (id)initWithMethod:(Method)method_ classMethod:(BOOL)isClassMethod_ {
 	self = [super init];
 	if(self != nil) {
 		self.method = method_;
-		
+		self.classMethod = isClassMethod_;
 		
 		NSMutableArray* array = [NSMutableArray array];
 
@@ -104,7 +114,13 @@
 	
 	NSMutableString* string = [NSMutableString stringWithCapacity:80];
 	
-	[string appendFormat:@"- (%@)", returnType.declaration];
+	if ([self isClassMethod]) {
+		[string appendFormat:@"+"];
+	} else {
+		[string appendFormat:@"-"];
+	}
+	
+	[string appendFormat:@" (%@)", returnType.declaration];
 	if(components.count == 1) {
 		[string appendFormat:@"%@", [components objectAtIndex:0]];
 		return string;

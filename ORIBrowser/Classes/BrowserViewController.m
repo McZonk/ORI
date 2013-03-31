@@ -158,7 +158,7 @@
 	self.sectionTitles = [NSArray arrayWithObjects:
 		@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I",
 		@"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R",
-		@"S", @"T", @"U", @"V", @"W", @"Y", @"Y", @"Z", @"#",
+		@"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z", @"#",
 		nil
 	];
 	
@@ -222,10 +222,21 @@
 
 - (NSArray*)sectionIndexTitlesForTableView:(UITableView*)tableView {
 	if(tableView == self.tableView) {
-		return self.sectionTitles;
+		NSMutableArray *sectionTitlesWithSearchIcon = [NSMutableArray arrayWithObject:UITableViewIndexSearch];
+		[sectionTitlesWithSearchIcon addObjectsFromArray:self.sectionTitles];
+		return sectionTitlesWithSearchIcon;
 	}
 
 	return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+	if ([title isEqualToString:UITableViewIndexSearch]) {
+		CGRect searchBarFrame = self.searchDisplayController.searchBar.frame;
+		[tableView scrollRectToVisible:searchBarFrame animated:NO];
+		return NSNotFound;
+	}
+	return [self.sectionTitles indexOfObject:title];
 }
 
 

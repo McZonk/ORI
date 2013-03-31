@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface FrameworkViewController : UITableViewController
+@interface FrameworkViewController : UITableViewController<UISearchDisplayDelegate>
 
 @end

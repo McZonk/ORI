@@ -100,7 +100,7 @@ NSString* UnfavoriteString = @"★";
 
 - (void)collectionInformation {
 	self.superclass = self.cls.ORISuperclass;
-
+	
 	NSArray* sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 	
 	self.subclasses = [self.cls.ORISubclasses sortedArrayUsingDescriptors:sortDescriptors];
@@ -121,7 +121,7 @@ NSString* UnfavoriteString = @"★";
 		[favoriteStore removeORIClass:self.cls];
 		isFavorite = NO;
 	}
-
+	
 	self.navigationItem.rightBarButtonItem.title = isFavorite ? UnfavoriteString : FavoriteString;
 }
 
@@ -288,13 +288,13 @@ NSString* UnfavoriteString = @"★";
 		if(cell == nil) {
 			cell = [MethodCell cell];
 		}
-
+		
 		if(tableView == self.searchDisplayController.searchResultsTableView) {
 			cell.method = [self.filteredMethods objectAtIndex:indexPath.row];
 		} else {
 			cell.method = [self.methods objectAtIndex:indexPath.row];
 		}
-
+		
 		return cell;
 	}
 	
@@ -326,10 +326,11 @@ NSString* UnfavoriteString = @"★";
 	} else if(indexPath.section == 2) {
 		object = [self.protocols objectAtIndex:indexPath.row];
 	}
-	
 	UIViewController* viewController = [UIViewController viewControllerWithORIObject:object];
 	if(viewController) {
 		[self.navigationController pushViewController:viewController animated:YES];
+	} else {
+		[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 	}
 }
 
@@ -355,7 +356,7 @@ NSString* UnfavoriteString = @"★";
 		
 		return [name containsAllCharactersInString:searchString];
 	}];
-
+	
 	self.filteredProtocols = [self.filteredProtocols filteredArrayUsingPredicate:predicate];
 	self.filteredSubclasses = [self.filteredSubclasses filteredArrayUsingPredicate:predicate];
 	self.filteredClassMethods = [self.filteredClassMethods filteredArrayUsingPredicate:predicate];

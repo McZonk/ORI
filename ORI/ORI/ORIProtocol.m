@@ -118,8 +118,25 @@
 	NSMutableString* string = [NSMutableString stringWithCapacity:1024];
 	
 	
+	NSArray* sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+	
+	[string appendFormat:@"@protocol %@\n\n", self.name];
+		
+	NSSet* selectors = self.ORISelectors;
+	if(selectors) {
+		NSArray* sortedSelectors = [selectors sortedArrayUsingDescriptors:sortDescriptors];
+		
+		for(ORISelector* selector in sortedSelectors) {
+			[string appendFormat:@"%@;\n", selector.declaration];
+		}
+		
+		[string appendFormat:@"\n"];
+	}
+	
+	[string appendFormat:@"@end"];
 	
 	return string;
+
 }
 
 

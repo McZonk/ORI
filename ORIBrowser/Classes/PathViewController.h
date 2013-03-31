@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PathViewController : UITableViewController
+@interface PathViewController : UITableViewController<UISearchDisplayDelegate>
 
 - (id)initWithPath:(NSString*)path;
 

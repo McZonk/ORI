@@ -130,6 +130,9 @@
 	if(viewController) {
 		[self.navigationController pushViewController:viewController animated:YES];
 	}
+	else {
+		[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+	}
 }
 
 @synthesize protocol = _protocol;

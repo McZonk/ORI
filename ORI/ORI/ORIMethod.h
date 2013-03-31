@@ -9,6 +9,7 @@
 + (NSSet*)ORIMethods;
 
 + (ORIMethod*)ORIMethodWithMethod:(Method)method;
++ (ORIMethod*)ORIClassMethodWithMethod:(Method)method;
 
 - (id)initWithMethod:(Method)method;
 
@@ -20,5 +21,7 @@
 
 @property (nonatomic, readonly) ORIType* ORIReturnType;
 @property (nonatomic, readonly) NSArray* ORIArgumentTypes;
+
+@property (nonatomic, readonly, getter = isClassMethod) BOOL classMethod;
 
 @end
