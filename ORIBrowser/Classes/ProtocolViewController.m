@@ -33,6 +33,8 @@
 }
 
 - (void)dealloc {
+	self.searchDisplayController.delegate = nil;
+
 	self.protocol = nil;
 	
 	self.superprotocols = nil;

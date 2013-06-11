@@ -56,6 +56,8 @@
 }
 
 - (void)dealloc {
+	self.searchDisplayController.delegate = nil;
+
 	self.frameworks = nil;
 	self.privateFrameworks = nil;
 

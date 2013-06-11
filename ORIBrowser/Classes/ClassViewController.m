@@ -59,6 +59,8 @@ NSString* UnfavoriteString = @"★";
 }
 
 - (void)dealloc {
+	self.searchDisplayController.delegate = nil;
+
 	self.cls = nil;
 	self.superclass = nil;
 	self.protocols = nil;

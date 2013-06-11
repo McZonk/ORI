@@ -61,9 +61,11 @@
 }
 
 - (void)dealloc {
+	self.searchDisplayController.delegate = nil;
+
 	self.path = nil;
 	self.files = nil;
-	
+
 	self.interactionController = nil;
 
 	[super dealloc];

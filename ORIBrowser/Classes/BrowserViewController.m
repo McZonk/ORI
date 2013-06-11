@@ -93,6 +93,8 @@
 - (void)dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"ObjectListDidChangeNotification" object:nil];
 
+	self.searchDisplayController.delegate = nil;
+	
 	self.classCountView = nil;
 	
 	self.sectionObjects = nil;
