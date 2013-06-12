@@ -12,4 +12,6 @@
 @property (nonatomic, assign) IBOutlet UILabel* sizeView;
 @property (nonatomic, assign) IBOutlet UILabel* typeView;
 
+@property (nonatomic, assign) IBOutlet UIImageView* thumbnailView;
+
 @end

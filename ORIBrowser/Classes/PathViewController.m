@@ -100,7 +100,8 @@
 	NSString* name = [self.files objectAtIndex:indexPath.row];
 	NSString* fullPath = [self.path stringByAppendingPathComponent:name];
 	NSDictionary* attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:fullPath error:nil];
-
+	NSString *extension = fullPath.pathExtension;
+	
 //	NSLog(@"%@ %@", name, attributes);
 	
 	if([[attributes fileType] isEqual:NSFileTypeDirectory]) {
@@ -134,6 +135,16 @@
 			cell.sizeView.text = [NSString stringWithFormat:@"%.1f kB", fileSize / 1024.0f];
 		} else {
 			cell.sizeView.text = [NSString stringWithFormat:@"%.1f MB", fileSize / (1024.0f * 1024.0f)];
+		}
+		
+		// TODO: load asynchronous
+		if(fileSize < 65536 && ([extension isEqualToString:@"png"] || [extension isEqualToString:@"jpg"])) {
+			cell.typeView.hidden = YES;
+			cell.thumbnailView.hidden = NO;
+			cell.thumbnailView.image = [UIImage imageWithContentsOfFile:fullPath];
+		} else {
+			cell.typeView.hidden = NO;
+			cell.thumbnailView.hidden = YES;
 		}
 		
 		return cell;
