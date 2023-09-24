@@ -2,13 +2,6 @@
 
 @implementation ORICompoundType
 
-- (void)dealloc {
-	self.name = nil;
-	self.structTypes = nil;
-	
-	[super dealloc];
-}
-
 - (NSString*)declaration {
 	NSMutableString* string = [NSMutableString stringWithCapacity:256];
 	[string appendString:[[self class] declarationForFlags:self.flags]];

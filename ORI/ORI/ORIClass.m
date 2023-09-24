@@ -13,13 +13,13 @@
 
 @implementation ORIClass
 
-+ (NSSet*)ORIClasses {
-	NSInteger count = objc_getClassList(NULL, 0);
++ (NSSet<ORIClass*>*)ORIClasses {
+	unsigned int count = objc_getClassList(NULL, 0);
 	NSMutableData* classData = [NSMutableData dataWithLength:sizeof(Class) * count];
 	Class* classes = (Class*)[classData mutableBytes];
 	objc_getClassList(classes, count);
 	
-	NSMutableSet* set = [NSMutableSet setWithCapacity:count];
+	NSMutableSet<ORIClass*>* set = [NSMutableSet setWithCapacity:count];
 	for(NSUInteger i = 0; i < count; i++) {
 		[set addObject:[self ORIClassWithClass:classes[i]]];
 	}
@@ -27,14 +27,14 @@
 }
 
 + (ORIClass*)ORIClassWithClass:(Class)cls {
-	return [[[ORIClass alloc] initWithClass:cls] autorelease];
+	return [[ORIClass alloc] initWithClass:cls];
 }
 
 + (ORIClass*)ORIClassWithName:(NSString*)name {
-	return [[[ORIClass alloc] initWithName:name] autorelease];
+	return [[ORIClass alloc] initWithName:name];
 }
 
-- (id)initWithClass:(Class)cls_ {
+- (instancetype)initWithClass:(Class)cls_ {
 	self = [super init];
 	if(self != nil) {
 		self.cls = cls_;
@@ -42,14 +42,8 @@
 	return self;
 }
 
-- (id)initWithName:(NSString*)name {
+- (instancetype)initWithName:(NSString*)name {
 	return [self initWithClass:NSClassFromString(name)];
-}
-
-- (void)dealloc {
-	self.cls = Nil;
-	
-	[super dealloc];
 }
 
 @synthesize cls;
@@ -87,7 +81,7 @@
 	if(!self.superclass) {
 		return nil;
 	}
-	return [[[ORIClass alloc] initWithClass:self.superclass] autorelease];
+	return [[ORIClass alloc] initWithClass:self.superclass];
 }
 
 - (NSArray*)ORIClasses {
@@ -101,7 +95,7 @@
 }
 
 - (NSSet*)ORISubclasses {
-	NSUInteger count = 0;
+	unsigned int count = 0;
 	Class* classes = objc_copyClassList(&count);
 	if(count == 0) {
 		return nil;
@@ -122,8 +116,8 @@
 }
 
 - (NSSet*)ORIProtocols {
-	NSUInteger count = 0;
-	Protocol** protocols = class_copyProtocolList(cls, &count);
+	unsigned int count = 0;
+	Protocol* __unsafe_unretained * protocols = class_copyProtocolList(cls, &count);
 	if(count == 0) {
 		return nil;
 	}
@@ -140,7 +134,7 @@
 }
 
 - (NSSet*)ORIIvars {
-	NSUInteger count = 0;
+	unsigned int count = 0;
 	Ivar* ivars = class_copyIvarList(cls, &count);
 	if(count == 0) {
 		return nil;
@@ -158,7 +152,7 @@
 }
 
 - (NSSet*)ORIMethods {
-	NSUInteger count = 0;
+	unsigned int count = 0;
 	Method* methods = class_copyMethodList(cls, &count);
 	if(count == 0) {
 		return nil;
@@ -176,7 +170,7 @@
 }
 
 - (NSSet*)ORIClassMethods {
-	NSUInteger count = 0;
+	unsigned int count = 0;
 	Method* methods = class_copyMethodList(self.metaclass, &count);
 	
 	NSMutableSet* result = [NSMutableSet setWithCapacity:count];

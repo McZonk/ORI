@@ -2,15 +2,15 @@
 
 #import <objc/runtime.h>
 
-#import "ORIType.h"
+@class ORIType;
 
 @interface ORIMethod : NSObject
 
-+ (NSSet*)ORIMethods;
++ (NSSet<ORIMethod*>*)ORIMethods;
 
 + (ORIMethod*)ORIMethodWithMethod:(Method)method;
 
-- (id)initWithMethod:(Method)method;
+- (instancetype)initWithMethod:(Method)method;
 
 @property (nonatomic, assign, readonly) Method method;
 
@@ -19,6 +19,6 @@
 @property (nonatomic, readonly) NSString* declaration;
 
 @property (nonatomic, readonly) ORIType* ORIReturnType;
-@property (nonatomic, readonly) NSArray* ORIArgumentTypes;
+@property (nonatomic, readonly) NSArray<ORIType*>* ORIArgumentTypes;
 
 @end

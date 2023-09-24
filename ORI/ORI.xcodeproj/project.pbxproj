@@ -7,24 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		507DA9A5143B71CA007FA359 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507DA9A4143B71CA007FA359 /* Foundation.framework */; };
-		507DA9C7143B72FA007FA359 /* NSObject+ORI.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B3143B72FA007FA359 /* NSObject+ORI.m */; };
-		507DA9C9143B72FA007FA359 /* NSScanner+ORI.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B5143B72FA007FA359 /* NSScanner+ORI.m */; };
-		507DA9CB143B72FA007FA359 /* ORIClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B7143B72FA007FA359 /* ORIClass.m */; };
-		507DA9CD143B72FA007FA359 /* ORICompoundType.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B9143B72FA007FA359 /* ORICompoundType.m */; };
-		507DA9CF143B72FA007FA359 /* ORIIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9BB143B72FA007FA359 /* ORIIvar.m */; };
-		507DA9D1143B72FA007FA359 /* ORIMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9BD143B72FA007FA359 /* ORIMethod.m */; };
-		507DA9D3143B72FA007FA359 /* ORIPointerType.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9BF143B72FA007FA359 /* ORIPointerType.m */; };
-		507DA9D5143B72FA007FA359 /* ORIProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9C1143B72FA007FA359 /* ORIProtocol.m */; };
-		507DA9D7143B72FA007FA359 /* ORISelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9C3143B72FA007FA359 /* ORISelector.m */; };
-		507DA9D9143B72FA007FA359 /* ORIType.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9C5143B72FA007FA359 /* ORIType.m */; };
+		825815B92AC04A6C00281A4B /* ORI.h in Headers */ = {isa = PBXBuildFile; fileRef = 825815B82AC04A6C00281A4B /* ORI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815BA2AC04A7300281A4B /* ORIClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B7143B72FA007FA359 /* ORIClass.m */; };
+		825815BB2AC04A7300281A4B /* NSScanner+ORI.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B5143B72FA007FA359 /* NSScanner+ORI.m */; };
+		825815BC2AC04A7300281A4B /* ORIProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9C1143B72FA007FA359 /* ORIProtocol.m */; };
+		825815BD2AC04A7300281A4B /* ORICompoundType.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9B8143B72FA007FA359 /* ORICompoundType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815BE2AC04A7300281A4B /* ORIMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9BD143B72FA007FA359 /* ORIMethod.m */; };
+		825815BF2AC04A7300281A4B /* ORIPointerType.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9BF143B72FA007FA359 /* ORIPointerType.m */; };
+		825815C02AC04A7300281A4B /* ORISelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9C2143B72FA007FA359 /* ORISelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815C12AC04A7300281A4B /* ORIType.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9C4143B72FA007FA359 /* ORIType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815C22AC04A7300281A4B /* ORIIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9BB143B72FA007FA359 /* ORIIvar.m */; };
+		825815C32AC04A7300281A4B /* ORICompoundType.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B9143B72FA007FA359 /* ORICompoundType.m */; };
+		825815C42AC04A7300281A4B /* ORIMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9BC143B72FA007FA359 /* ORIMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815C52AC04A7300281A4B /* ORIProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9C0143B72FA007FA359 /* ORIProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815C62AC04A7300281A4B /* ORIType.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9C5143B72FA007FA359 /* ORIType.m */; };
+		825815C72AC04A7300281A4B /* NSObject+ORI.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9B3143B72FA007FA359 /* NSObject+ORI.m */; };
+		825815C82AC04A7300281A4B /* ORISelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 507DA9C3143B72FA007FA359 /* ORISelector.m */; };
+		825815C92AC04A7300281A4B /* NSObject+ORI.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9B2143B72FA007FA359 /* NSObject+ORI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815CA2AC04A7300281A4B /* ORIPointerType.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9BE143B72FA007FA359 /* ORIPointerType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815CB2AC04A7300281A4B /* ORIIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9BA143B72FA007FA359 /* ORIIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815CD2AC04A7300281A4B /* ORIClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9B6143B72FA007FA359 /* ORIClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825815D22AC0AA3C00281A4B /* NSScanner+ORI.h in Headers */ = {isa = PBXBuildFile; fileRef = 507DA9B4143B72FA007FA359 /* NSScanner+ORI.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		507DA9A1143B71CA007FA359 /* libORI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libORI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		507DA9A4143B71CA007FA359 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		507DA9A8143B71CA007FA359 /* ORI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORI-Prefix.pch"; sourceTree = "<group>"; };
-		507DA9A9143B71CA007FA359 /* ORI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORI.h; sourceTree = "<group>"; };
 		507DA9B2143B72FA007FA359 /* NSObject+ORI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ORI.h"; sourceTree = "<group>"; };
 		507DA9B3143B72FA007FA359 /* NSObject+ORI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ORI.m"; sourceTree = "<group>"; };
 		507DA9B4143B72FA007FA359 /* NSScanner+ORI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+ORI.h"; sourceTree = "<group>"; };
@@ -45,14 +52,15 @@
 		507DA9C3143B72FA007FA359 /* ORISelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORISelector.m; sourceTree = "<group>"; };
 		507DA9C4143B72FA007FA359 /* ORIType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORIType.h; sourceTree = "<group>"; };
 		507DA9C5143B72FA007FA359 /* ORIType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORIType.m; sourceTree = "<group>"; };
+		825815B12AC04A3E00281A4B /* ORI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ORI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825815B82AC04A6C00281A4B /* ORI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		507DA99E143B71CA007FA359 /* Frameworks */ = {
+		825815AE2AC04A3E00281A4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				507DA9A5143B71CA007FA359 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +79,7 @@
 		507DA9A2143B71CA007FA359 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				507DA9A1143B71CA007FA359 /* libORI.a */,
+				825815B12AC04A3E00281A4B /* ORI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,8 +95,7 @@
 		507DA9A6143B71CA007FA359 /* ORI */ = {
 			isa = PBXGroup;
 			children = (
-				507DA9A8143B71CA007FA359 /* ORI-Prefix.pch */,
-				507DA9A9143B71CA007FA359 /* ORI.h */,
+				825815B82AC04A6C00281A4B /* ORI.h */,
 				507DA9B2143B72FA007FA359 /* NSObject+ORI.h */,
 				507DA9B3143B72FA007FA359 /* NSObject+ORI.m */,
 				507DA9B4143B72FA007FA359 /* NSScanner+ORI.h */,
@@ -116,23 +123,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		507DA99F143B71CA007FA359 /* Headers */ = {
+		825815AC2AC04A3E00281A4B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825815C92AC04A7300281A4B /* NSObject+ORI.h in Headers */,
+				825815CD2AC04A7300281A4B /* ORIClass.h in Headers */,
+				825815C42AC04A7300281A4B /* ORIMethod.h in Headers */,
+				825815C52AC04A7300281A4B /* ORIProtocol.h in Headers */,
+				825815CB2AC04A7300281A4B /* ORIIvar.h in Headers */,
+				825815CA2AC04A7300281A4B /* ORIPointerType.h in Headers */,
+				825815D22AC0AA3C00281A4B /* NSScanner+ORI.h in Headers */,
+				825815BD2AC04A7300281A4B /* ORICompoundType.h in Headers */,
+				825815C02AC04A7300281A4B /* ORISelector.h in Headers */,
+				825815B92AC04A6C00281A4B /* ORI.h in Headers */,
+				825815C12AC04A7300281A4B /* ORIType.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		507DA9A0143B71CA007FA359 /* ORI */ = {
+		825815B02AC04A3E00281A4B /* ORI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 507DA9AE143B71CA007FA359 /* Build configuration list for PBXNativeTarget "ORI" */;
+			buildConfigurationList = 825815B52AC04A3E00281A4B /* Build configuration list for PBXNativeTarget "ORI" */;
 			buildPhases = (
-				507DA99D143B71CA007FA359 /* Sources */,
-				507DA99E143B71CA007FA359 /* Frameworks */,
-				507DA99F143B71CA007FA359 /* Headers */,
+				825815AC2AC04A3E00281A4B /* Headers */,
+				825815AD2AC04A3E00281A4B /* Sources */,
+				825815AE2AC04A3E00281A4B /* Frameworks */,
+				825815AF2AC04A3E00281A4B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -140,8 +159,8 @@
 			);
 			name = ORI;
 			productName = ORI;
-			productReference = 507DA9A1143B71CA007FA359 /* libORI.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 825815B12AC04A3E00281A4B /* ORI.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -150,12 +169,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				TargetAttributes = {
+					825815B02AC04A3E00281A4B = {
+						CreatedOnToolsVersion = 15.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 507DA99B143B71CA007FA359 /* Build configuration list for PBXProject "ORI" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 507DA996143B71CA007FA359;
@@ -163,26 +189,36 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				507DA9A0143B71CA007FA359 /* ORI */,
+				825815B02AC04A3E00281A4B /* ORI */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		825815AF2AC04A3E00281A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		507DA99D143B71CA007FA359 /* Sources */ = {
+		825815AD2AC04A3E00281A4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				507DA9C7143B72FA007FA359 /* NSObject+ORI.m in Sources */,
-				507DA9C9143B72FA007FA359 /* NSScanner+ORI.m in Sources */,
-				507DA9CB143B72FA007FA359 /* ORIClass.m in Sources */,
-				507DA9CD143B72FA007FA359 /* ORICompoundType.m in Sources */,
-				507DA9CF143B72FA007FA359 /* ORIIvar.m in Sources */,
-				507DA9D1143B72FA007FA359 /* ORIMethod.m in Sources */,
-				507DA9D3143B72FA007FA359 /* ORIPointerType.m in Sources */,
-				507DA9D5143B72FA007FA359 /* ORIProtocol.m in Sources */,
-				507DA9D7143B72FA007FA359 /* ORISelector.m in Sources */,
-				507DA9D9143B72FA007FA359 /* ORIType.m in Sources */,
+				825815C62AC04A7300281A4B /* ORIType.m in Sources */,
+				825815C22AC04A7300281A4B /* ORIIvar.m in Sources */,
+				825815C32AC04A7300281A4B /* ORICompoundType.m in Sources */,
+				825815BF2AC04A7300281A4B /* ORIPointerType.m in Sources */,
+				825815BB2AC04A7300281A4B /* NSScanner+ORI.m in Sources */,
+				825815BE2AC04A7300281A4B /* ORIMethod.m in Sources */,
+				825815C72AC04A7300281A4B /* NSObject+ORI.m in Sources */,
+				825815BC2AC04A7300281A4B /* ORIProtocol.m in Sources */,
+				825815BA2AC04A7300281A4B /* ORIClass.m in Sources */,
+				825815C82AC04A7300281A4B /* ORISelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +228,8 @@
 		507DA9AC143B71CA007FA359 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -208,15 +244,16 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 			};
 			name = Debug;
 		};
 		507DA9AD143B71CA007FA359 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -224,32 +261,168 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		507DA9AF143B71CA007FA359 /* Debug */ = {
+		825815B62AC04A3E00281A4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/ORI.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ORI/ORI-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks @loader_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks @loader_path/Frameworks";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mczonk.ORI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		507DA9B0143B71CA007FA359 /* Release */ = {
+		825815B72AC04A3E00281A4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/ORI.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ORI/ORI-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks @loader_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks @loader_path/Frameworks";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mczonk.ORI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -265,11 +438,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		507DA9AE143B71CA007FA359 /* Build configuration list for PBXNativeTarget "ORI" */ = {
+		825815B52AC04A3E00281A4B /* Build configuration list for PBXNativeTarget "ORI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				507DA9AF143B71CA007FA359 /* Debug */,
-				507DA9B0143B71CA007FA359 /* Release */,
+				825815B62AC04A3E00281A4B /* Debug */,
+				825815B72AC04A3E00281A4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

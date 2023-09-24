@@ -1,5 +1,6 @@
 #import "ORIMethod.h"
 
+#import "ORIType.h"
 #import "NSScanner+ORI.h"
 
 @interface ORIMethod ()
@@ -13,7 +14,7 @@
 
 @implementation ORIMethod
 
-+ (NSSet*)ORIMethods {
++ (NSSet<ORIMethod*>*)ORIMethods {
 	return nil;
 #if 0
 	NSUInteger count objc_get
@@ -32,16 +33,15 @@
 }
 
 + (ORIMethod*)ORIMethodWithMethod:(Method)method {
-	return [[[ORIMethod alloc] initWithMethod:method] autorelease];
+	return [[ORIMethod alloc] initWithMethod:method];
 }
 
-- (id)initWithMethod:(Method)method_ {
+- (instancetype)initWithMethod:(Method)method_ {
 	self = [super init];
 	if(self != nil) {
 		self.method = method_;
 		
-		
-		NSMutableArray* array = [NSMutableArray array];
+		NSMutableArray<ORIType*>* array = [NSMutableArray array];
 
 		NSScanner* scanner = [NSScanner scannerWithString:self.typeEncoding];
 		do {
@@ -58,18 +58,11 @@
 	return self;
 }
 
-- (void)dealloc {
-	self.method = 0;
-	self.ORITypes = nil;
-	
-	[super dealloc];
-}
-
 @synthesize method;
 @synthesize ORITypes;
 
 - (NSString*)description {
-	return [NSString stringWithFormat:@"%@:%@", [self class], self.name];
+	return [NSString stringWithFormat:@"%@:%@", self.class, self.name];
 }
 
 - (BOOL)isEqual:(id)object {
@@ -124,7 +117,7 @@
 			[string appendString:@"(UNKNOWN)"];
 		}
 		
-		[string appendFormat:@"arg%d", i];
+		[string appendFormat:@"arg%u", (unsigned int)i];
 	}
 	
 	return string;
@@ -138,7 +131,7 @@
 	return [self.ORITypes objectAtIndex:0];
 }
 
-- (NSArray*)ORIArgumentTypes {
+- (NSArray<ORIType*>*)ORIArgumentTypes {
 	if(self.ORITypes.count <= 3) {
 		return nil;
 	}

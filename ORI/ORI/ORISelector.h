@@ -2,16 +2,15 @@
 
 #import <objc/runtime.h>
 
-#import "ORIType.h"
+#import <ORI/ORIType.h>
 
-@interface ORISelector : NSObject {
-}
+@interface ORISelector : NSObject
 
 + (ORISelector*)ORISelectorWithSelector:(SEL)selector;
 + (ORISelector*)ORISelectorWithSelector:(SEL)selector types:(const char*)types;
 
-- (id)initWithSelector:(SEL)selector;
-- (id)initWithSelector:(SEL)selector types:(const char*)types;
+- (instancetype)initWithSelector:(SEL)selector;
+- (instancetype)initWithSelector:(SEL)selector types:(const char*)types;
 
 @property (nonatomic, assign, readonly) SEL selector;
 @property (nonatomic, retain, readonly) NSString* types;

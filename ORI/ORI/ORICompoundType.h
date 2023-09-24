@@ -1,4 +1,4 @@
-#import "ORIType.h"
+#import <ORI/ORIType.h>
 
 @interface ORICompoundType : ORIType
 

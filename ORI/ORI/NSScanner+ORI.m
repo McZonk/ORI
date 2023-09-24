@@ -6,15 +6,6 @@
 
 #import <objc/runtime.h>
 
-/*
-@interface NSScanner (ORI)
-
-- (BOOL)scanORIType:(ORIType**)type withOffset:(BOOL)withOffset;
-
-@end
-*/
-
-
 @implementation NSScanner (ORI)
 
 - (unichar)nextUnichar {
@@ -92,7 +83,7 @@
 				ORIType* subtype = nil;
 				[self scanORIType:&subtype withOffset:NO];
 
-				ORIPointerType* pointerType = [[[ORIPointerType alloc] init] autorelease];
+				ORIPointerType* pointerType = [[ORIPointerType alloc] init];
 				pointerType.pointerType = subtype;
 				pointerType.flags = flags;
 				pointerType.type = ORITypeTypePointer;
@@ -130,7 +121,7 @@
 				}
 				[self scanUnichar:nil];
 				
-				ORICompoundType* structType = [[[ORICompoundType alloc] init] autorelease];
+				ORICompoundType* structType = [[ORICompoundType alloc] init];
 				structType.flags = flags;
 				structType.type = c == _C_UNION_B ? ORITypeTypeUnion : ORITypeTypeStruct;
 				if(name.length > 0) {

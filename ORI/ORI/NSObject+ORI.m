@@ -20,7 +20,7 @@
 		}
 		[text appendFormat:@"%@", class];
 		
-		NSArray* ivars = [[class.ORIIvars allObjects] sortedArrayUsingSelector:@selector(compare:)];
+		NSArray* ivars = [class.ORIIvars.allObjects sortedArrayUsingSelector:@selector(compare:)];
 		for(ORIIvar* ivar in ivars) {
 			if(text.length > 0 && ![text hasSuffix:@"\n"]) {
 				[text appendString:@"\n"];
@@ -28,7 +28,7 @@
 			[text appendFormat:@"  %@", ivar];
 		}
 		
-		NSArray* methods = [[class.ORIMethods allObjects] sortedArrayUsingSelector:@selector(compare:)];
+		NSArray* methods = [class.ORIMethods.allObjects sortedArrayUsingSelector:@selector(compare:)];
 		for(ORIMethod* method in methods) {
 			if(text.length > 0 && ![text hasSuffix:@"\n"]) {
 				[text appendString:@"\n"];

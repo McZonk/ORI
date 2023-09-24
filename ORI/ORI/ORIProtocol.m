@@ -12,8 +12,8 @@
 @implementation ORIProtocol
 
 + (NSSet*)ORIProtocols {
-	NSUInteger count = 0;
-	Protocol** protocols = objc_copyProtocolList(&count);
+	unsigned int count = 0;
+	Protocol* __unsafe_unretained * protocols = objc_copyProtocolList(&count);
 	
 	NSMutableSet* set = [NSMutableSet setWithCapacity:count];
 	for(NSUInteger i = 0; i < count; i++) {
@@ -27,21 +27,15 @@
 }
 
 + (ORIProtocol*)ORIProtocolWithProtocol:(Protocol*)protocol {
-	return [[[self alloc] initWithProtocol:protocol] autorelease];
+	return [[self alloc] initWithProtocol:protocol];
 }
 
-- (id)initWithProtocol:(Protocol*)protocol_ {
+- (instancetype)initWithProtocol:(Protocol*)protocol_ {
 	self = [super init];
 	if(self != nil) {
 		self.protocol = protocol_;
 	}
 	return self;
-}
-
-- (void)dealloc {
-	self.protocol = 0;
-	
-	[super dealloc];
 }
 
 @synthesize protocol;
@@ -70,8 +64,8 @@
  */
 
 - (NSSet*)ORIProtocols {
-	NSUInteger count = 0;
-	Protocol** protocols = protocol_copyProtocolList(self.protocol, &count);
+	unsigned int count = 0;
+	Protocol* __unsafe_unretained * protocols = protocol_copyProtocolList(self.protocol, &count);
 	if(count == 0) {
 		return nil;
 	}
@@ -88,8 +82,8 @@
 }
 
 - (NSSet*)ORISelectors {
-	NSUInteger countRequired = 0;
-	NSUInteger countOptional = 0;
+	unsigned int countRequired = 0;
+	unsigned int countOptional = 0;
 	
 	struct objc_method_description* selsRequired = protocol_copyMethodDescriptionList(self.protocol, YES, YES, &countRequired);
 	struct objc_method_description* selsOptional = protocol_copyMethodDescriptionList(self.protocol, NO, YES, &countOptional);

@@ -2,14 +2,13 @@
 
 #import <objc/runtime.h>
 
-#import "ORIType.h"
-
+@class ORIType;
 
 @interface ORIIvar : NSObject
 
 + (ORIIvar*)ORIIvarWithIvar:(Ivar)ivar;
 
-- (id)initWithIvar:(Ivar)ivar;
+- (instancetype)initWithIvar:(Ivar)ivar;
 
 @property (nonatomic, assign, readonly) Ivar ivar;
 

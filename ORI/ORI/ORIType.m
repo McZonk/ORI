@@ -88,13 +88,8 @@
 	}
 }
 
-- (void)dealloc {
-	
-	[super dealloc];
-}
-
 + (ORIType*)typeWithType:(ORITypeType)type flags:(ORITypeFlag)flags {
-	ORIType* oritype = [[[self alloc] init] autorelease];
+	ORIType* oritype = [[self alloc] init];
 	oritype.type = type;
 	oritype.flags = flags;
 	return oritype;

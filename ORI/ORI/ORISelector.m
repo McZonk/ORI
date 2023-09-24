@@ -16,18 +16,18 @@
 @implementation ORISelector
 
 + (ORISelector*)ORISelectorWithSelector:(SEL)selector {
-	return [[[self alloc] initWithSelector:selector] autorelease];
+	return [[self alloc] initWithSelector:selector];
 }
 
 + (ORISelector*)ORISelectorWithSelector:(SEL)selector types:(const char*)types {
-	return [[[self alloc] initWithSelector:selector types:types] autorelease];
+	return [[self alloc] initWithSelector:selector types:types];
 }
 
-- (id)initWithSelector:(SEL)selector {
+- (instancetype)initWithSelector:(SEL)selector {
 	return [self initWithSelector:selector types:0];
 }
 
-- (id)initWithSelector:(SEL)selector_ types:(const char*)types_ {
+- (instancetype)initWithSelector:(SEL)selector_ types:(const char*)types_ {
 	self = [super init];
 	if(self != nil) {
 		self.selector = selector_;
@@ -51,12 +51,6 @@
 }
 
 - (void)dealloc {
-	self.selector = 0;
-	self.types = nil;
-	
-	self.ORITypes = nil;
-	
-	[super dealloc];
 }
 
 @synthesize selector = _selector;
@@ -101,7 +95,7 @@
 			[string appendString:@"(UNKNOWN)"];
 		}
 		
-		[string appendFormat:@"arg%d", i];
+		[string appendFormat:@"arg%u", (unsigned int)i];
 	}
 	
 	return string;

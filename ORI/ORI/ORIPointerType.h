@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 
-#import "ORIType.h"
-
+#import <ORI/ORIType.h>
 
 @interface ORIPointerType : ORIType
 

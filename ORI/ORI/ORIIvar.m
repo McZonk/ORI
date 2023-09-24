@@ -2,6 +2,8 @@
 
 #import "NSScanner+ORI.h"
 
+#import "ORIType.h"
+
 
 @interface ORIIvar ()
 
@@ -13,21 +15,15 @@
 @implementation ORIIvar
 
 + (ORIIvar*)ORIIvarWithIvar:(Ivar)ivar {
-	return [[[ORIIvar alloc] initWithIvar:ivar] autorelease];
+	return [[ORIIvar alloc] initWithIvar:ivar];
 }
 
-- (id)initWithIvar:(Ivar)ivar_ {
+- (instancetype)initWithIvar:(Ivar)ivar_ {
 	self = [super init];
 	if(self != nil) {
 		self.ivar = ivar_;
 	}
 	return self;
-}
-
-- (void)dealloc {
-	self.ivar = 0;
-	
-	[super dealloc];
 }
 
 @synthesize ivar;
